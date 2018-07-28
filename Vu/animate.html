@@ -1,0 +1,267 @@
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+   
+    
+    <style >
+        .intro{
+            overflow: hidden;
+            height:100%;
+        }
+        .intro .title{
+            margin:0px;
+            text-align: center;
+            background-color:rgb(27,29,31);
+            width:100%;
+            
+        }
+        .intro .title .tit1{
+            margin:auto;
+            font-size:28px;
+            color:white;
+            display:block;
+            padding:30px;
+             transition:transform 500ms;
+           
+           
+            
+        }
+        .run{
+           opacity:0;
+            transform:translateX(500px)
+        }
+        .intro .content{
+            margin:0px;
+            //height:100%;
+        }
+        .intro .content .detail{
+            background-color:currentColor;
+           
+        }
+        .intro .detail ul{
+            margin-top:30px;
+            transition:900ms 1s;
+            opacity:1;
+            padding:0px;
+            margin-left:15%;
+        }
+        .intro .detail ul.fadein{
+            opacity:0;
+            transform: translateX(-200px);
+            
+        }
+        .intro .detail li{
+            color:white;
+            font-size:20px;
+            margin-bottom: 10px;
+            
+        }
+        .intro .detail li:before{
+            content:"\2714";
+            margin-right:10px;
+            color:lawngreen;
+            
+        }
+        .intro .title h1{
+            opacity:0;
+            width:100%;
+            height:60px;
+            color:orangered;
+            margin-top:30px;
+            text-align: center;
+           position:relative;
+        }
+        
+        .intro .title h1:after{
+            content: "";
+            display: block;
+            width: 130px;
+            margin: auto;
+            margin-top: 2%;
+            border-bottom: 3px solid chartreuse;
+
+        }
+        
+       
+        .intro .title span{
+            transition:3000ms 500ms;
+            opacity:0;
+        }
+        .intro .map{
+            padding:0px;
+            text-align: center;
+        }
+        .intro .show{
+            opacity:1!important;}
+        .btnMore{
+            display: block;
+            border:2px solid white;
+            width:155px;
+            text-align: center;
+            color:white;
+            padding:10px;
+            margin-left:47%;
+            margin-top:6%;
+            font-size:20px;
+            transition:transform 800ms 1200ms ;
+            transform:scale(0,0);
+            margin-bottom:3%;
+        }
+        .btnMore:hover{
+            text-decoration: none;
+            background-color:olivedrab;
+            color:white;
+            border:none;
+            border-radius:10px;
+            transition:100ms;
+        }
+        .btnScale{
+            
+            transform: scale(1,1);
+        }
+       /*------------------*/
+        @-webkit-keyframes bounceInDown {
+              from,
+              60%,
+              75%,
+              90%,
+              to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+
+              0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -3000px, 0);
+                transform: translate3d(0, -3000px, 0);
+              }
+
+              60% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 25px, 0);
+                transform: translate3d(0, 25px, 0);
+              }
+
+              75% {
+                -webkit-transform: translate3d(0, -10px, 0);
+                transform: translate3d(0, -10px, 0);
+              }
+
+              90% {
+                -webkit-transform: translate3d(0, 5px, 0);
+                transform: translate3d(0, 5px, 0);
+              }
+
+              to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+              }
+            }
+
+        @keyframes bounceInDown {
+              from,
+              60%,
+              75%,
+              90%,
+              to {
+                -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+
+              0% {
+                opacity: 0;
+                -webkit-transform: translate3d(0, -3000px, 0);
+                transform: translate3d(0, -3000px, 0);
+              }
+
+              60% {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 25px, 0);
+                transform: translate3d(0, 25px, 0);
+              }
+
+              75% {
+                -webkit-transform: translate3d(0, -10px, 0);
+                transform: translate3d(0, -10px, 0);
+              }
+
+              90% {
+                -webkit-transform: translate3d(0, 5px, 0);
+                transform: translate3d(0, 5px, 0);
+              }
+
+              to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+              }
+            }
+
+        .bounceInDown {
+            opacity:1!important;
+            -webkit-animation-name: bounceInDown;
+            animation-name: bounceInDown;
+            animation-duration: 1s;
+            
+        }
+        
+      
+    </style>
+</head>
+    
+<body >
+    <div style="height:1000px;"></div>
+    <div class="intro">
+        <div class="row title" >
+            <h1>Clean & Care</h1>
+            <p class="tit1 run">Khi <span class="abc" style="color:orange">rửa xe</span> tại <span class="abc" style="color:red;">Clean & Care</span>, khách hàng sẽ nhận được sự an tâm, với các tiêu chí:</p>
+        </div>
+        <div class="row content">
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 detail">
+                <ul type="none" class="fadein">
+                    <li>Đội ngũ nhân viên chuyên nghiệp</li>
+                    <li>Thiết bị rửa xe hiện đại</li>
+                    <li>Dung dịch rửa xe có xuất xứ từ Mỹ</li>
+                    <li>Giá cả rẻ nhất trên thị trường</li>
+                </ul>
+                <a href="#" class="btnMore">Tìm hiểu thêm</a>
+            </div>  
+            <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 map">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.479840319646!2d106.7698235141723!3d10.851061660780307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175270ad28d48ab%3A0xa6c02de0a7c40d6c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgcGjhuqFtIEvhu7kgdGh14bqtdCBUcC4gSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1532710170400" width="600" height="450" frameborder="0" style="border:0;width:100%;" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+         
+        $(window).scroll(function(){
+            /*
+                x=toa do scroll
+                x
+            */
+           if(($(window).scrollTop()>=$(".intro").offset().top-30)&&($(window).scrollTop()<=$(".intro").offset().top+10)){
+              //  $(".intro .show").fadeIn("slow");
+               $(".intro ul").removeClass("fadein");
+               $(".intro h1").addClass("bounceInDown");
+              $(".title span").addClass("show");
+               $(".btnMore").addClass("btnScale");
+               $(".tit1").removeClass("run");
+           }
+           
+           if(($(window).scrollTop()<$(".intro").offset().top-$(".intro").innerHeight())||($(window).scrollTop()>$(".intro").offset().top+$(".intro").innerHeight())){
+                $(".title span").removeClass("show");
+                $(".intro ul").addClass("fadein");
+                $(".intro h1").removeClass("bounceInDown");
+                $(".btnMore").removeClass("btnScale");
+                $(".tit1").addClass("run");
+           }
+        });
+    </script>
+   
+</body>
+</html>
