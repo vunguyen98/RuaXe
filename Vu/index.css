@@ -1,4 +1,5 @@
-           .menu{
+/*--------------------MENU----------------------*/
+        .myMenu{
             background-color:currentColor;
             padding:15px;
             width:100%;
@@ -8,19 +9,19 @@
             left:0px;
             z-index:3;
         }
-        .menu li{
+        .myMenu li{
             display:inline;
             margin-right: 15px;
             
         }
-        .menu .iconMenu{
+        .myMenu .iconMenu{
             font-size: 36px;
             color:white;
             float:right;
             display:none;
-        }
+        }       
+        .myMenu a{
        
-        .menu a{
             text-decoration: none;
             color:white;
             padding:10px;
@@ -28,14 +29,14 @@
             font-size:20px;
             font-weight: 500;
         }
-        .menu .logo{
+        .myMenu .logo{
             display:inline-block;
             width:10%;
             height:10px;
            
            
         }
-        .menu img{
+        .myMenu img{
             height: 25px;
          
         }
@@ -46,29 +47,29 @@
             border-bottom:0px solid orange;
             padding-bottom: 5px;
         }
-        .menu a:hover .titleMenu{
+        .myMenu a:hover .titleMenu{
             color:orange;
             
         }
-        .menu a:hover .titleMenu{
+        .myMenu a:hover .titleMenu{
             transform:scaleX(1);
             border-width:2px;
         }
-        @media screen and (min-width:930px){
-            .menu>ul{
-            padding:0px;
-            margin:0;
-            display:inline!important;
-            float:right;
+        @media screen and (min-width:1024px){
+            .myMenu>ul{
+                padding:0px;
+                margin:0;
+                display:inline!important;
+                float:right;
             }
         }
-        @media  screen and (max-width:930px){
+        @media  screen and (max-width:1024px){
             
-            .menu .iconMenu{
+            .myMenu .iconMenu{
                 display:block;
             }
             
-            .menu >ul{
+            .myMenu >ul{
                 margin: 0;
                 position: absolute;
                 width:100%;
@@ -77,26 +78,175 @@
                 background-color:#38404b;
                 padding:0px;
             }
-            .menu li{
+            .myMenu li{
                 display:inline-block;
                 width:100%;
                 margin-left: 0px;
                 text-align: center;
             }
-            .menu a{
+            .myMenu a{
                 display:inline-block;
                 width:100%;
             }
-            .menu a:hover .titleMenu{            
+            .myMenu a:hover .titleMenu{            
                 z-index: 100;
                 border:none;
                 
             }
-            .menu a:hover {
+            .myMenu a:hover {
                 background-color:seagreen;
             }
-            .menu .iconMenu:hover{
+            .myMenu .iconMenu:hover{
                 cursor:pointer;
                 color:chocolate;
             }
+        }
+
+/*-------------------FOOTER---------------------*/
+
+        .footer{
+            margin:0px;
+            background-color:currentColor;
+            width:100%;
+            margin-top: 2%;
+          
+        }
+        .footer .name{
+            color:forestgreen;
+            font-weight:600;
+            font-size:21px;
+        }
+        .footer .content2{
+            font-size: 18px;
+            color:white;
+           
+        }
+        .footer .content1{
+            font-size: 21px;
+            color:white;
+            margin-bottom:12px;
+            margin-top:20px;
+        }
+        .footer .info{
+            margin-bottom:5px;
+        }
+        .footer .title{
+            color:red;
+            font-size:24px;
+            font-weight: 600;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        .footer .logo{
+            margin-top:55px;
+            margin-left:-31px;
+        }
+
+/*--------------------INFO-PAGE------------------*/
+        .contentInfo{
+            font-size:19px;
+            box-shadow: 10px 10px 50px -10px gray;
+            background-color:#f9f9f9;
+            padding:10px;
+            margin-top:1%;
+           
+        }
+/*--------------------GENERAL--------------------*/
+        .general{
+            border-bottom:2px solid seagreen;
+            padding:0px;
+        }
+        .general .name{
+            background-color:seagreen;
+            width:260px;
+            padding:5px;
+            text-align:center;
+            font-weight: 650;
+            color:white;
+            font-size:20px;
+             border-radius:100px 100px 0px 0px;
+        }
+/*--------------------RECRUIT--------------------*/
+        .recruit{
+            margin-top:3%;
+        }
+        .recruit .recruitComp{
+            display:block;
+            font-size:19px;
+            padding:10px;
+            background-color:#f9f9f9;
+            position:relative;
+            margin-bottom:1%;
+            box-shadow: 0px 6px 5px -5px gray;
+        }
+        .recruit .title{
+            margin-bottom:1%;
+            font-size:21px;
+            font-weight: 550;
+            color:deepskyblue;
+        }
+        .recruit .info .ico{
+            font-size:30px;
+            width:12px;
+            margin-right:3%;
+            margin-bottom:1%;
+            color:dodgerblue;
+        }
+        .recruit .info span{
+            color:green;
+            
+        }     
+        .recruit .ico1{
+            padding-left: 10px;
+            font-size:30px;
+             color:dodgerblue;
+        }
+        .recruit .detail{
+            display:none;
+           position:absolute;
+            top:67%;
+            right:3%;
+        }
+        .recruitComp:hover{
+            background-color:white;
+            box-shadow: 0px 0px 15px +5px gray;
+        }
+        .recruitComp:hover .title{
+           color:red;
+           
+        }
+        .recruitComp:hover .detail{
+            display:block;
+            color:mediumblue;
+        }
+        .recruitComp:hover{
+            text-decoration: none;
+        } 
+        @media screen and (max-width:640px){
+            .recruitComp:hover .detail{
+                display:none;
+            }
+        }
+/**/
+/*--------------------CONTENT-RECRUIT--------*/
+        .contentRecruit{
+            margin-top:2%;
+            box-shadow: 6px 6px 5px -5px gray;
+            font-size:18px;
+            padding-left: 30px;
+            
+        }
+        .contentRecruit .title{
+            font-weight: 550;
+            color:#455a64;
+            font-size:22px;
+            padding:2px;
+            margin-bottom:10px;
+            
+        }
+        .contentRecruit .title:after{
+            content:"";
+            border-bottom:4px solid #1dab83;
+            display: block;
+            width:250px;
         }
