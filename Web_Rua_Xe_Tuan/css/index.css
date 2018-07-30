@@ -1,0 +1,179 @@
+        #menu {
+            width: 100%;
+            text-align: center;
+            clear: both;
+            position: fixed;
+            z-index: 100;
+        }
+        
+        #menu .iconLogo {
+            width: 200px;
+            position: relative;
+            top: -16px;
+            padding: 0px;
+        }
+
+        #menu .iconMenu {
+            height: 25px;
+            position: relative;
+            top: -1px;
+        }
+
+        #menu .menuElement a {
+            text-align: center;
+            transition: 0.3s ease;
+            background: currentColor;
+            color: white;
+            margin: 0px;
+            background-color: black;
+            font-size: 20px;
+            padding: 12px 40px !important;
+            display: inline-block;
+            text-decoration: none;
+            transform: scaleX(1);
+            -webkit-transition: color 500ms, padding 500ms;
+        }
+
+        #menu .menuElement a:after {
+            display: block;
+            content: '';
+            border-bottom: solid 2px orange;
+            transform: scaleX(0);
+            transition: transform 500ms ease-in-out;
+        }
+
+        #menu .menuElement a:hover:after {
+            transform: scaleX(1);
+        }
+
+        #menu .menuElement a:hover {
+            color: rgb(223, 162, 50) !important; 
+            background-color: rgb(56, 56, 56) !important;
+        }
+
+        #menu .navbar{
+            margin-bottom: 0px;
+        }
+
+        #menu .myActive a{
+            background-color: rgb(46, 46, 46) !important;
+            color: rgb(226, 170, 65) !important;
+        }
+
+        #slideshow {
+            width: 100%;
+            height: -webkit-fill-available;
+            position: absolute;
+            top: 52px;
+            display:inline-block;
+            background-color: rgba(57, 156, 180, 0.438);
+            overflow: hidden;
+            z-index: -1;
+            max-height: 1010px;
+        }
+
+        #slideshow .mySlide{
+            width: 100%;
+            position: absolute;
+            top: 0px;
+        }
+
+        #slideshow .imgSlide{
+            position: relative;
+
+        }
+
+        #slideshow #containerButton{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: 40%;
+            left: 0px;
+            padding: 0px 20px;
+        }
+
+        #slideshow .slideButton {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            color: white;
+            background-color: rgb(172, 160, 160);
+            cursor: pointer;
+            text-align: center;
+            opacity: 0.7;
+
+            border-radius: 50%;
+            background: rgba(216, 147, 19, 0.349);
+            border: none;
+        }
+
+        #slideshow #containerButtonChoose{
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            top: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px 20px;
+        }
+
+        #slideshow #containerButtonChoose div{
+            width: 180px;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #slideshow .slideButtonChoose{
+            margin-left: 10px;
+            width: 25px;
+            height: 0px;
+            border-radius: 0%;
+            opacity: 0.8;
+            background: rgba(163, 148, 148, 0.774);
+            border: 2px solid rgb(255, 255, 255);
+        }
+
+        #slideshow .slideButton:focus{
+            outline: none;
+        }
+
+        #slideshow .slideButton:hover{
+            color: rgb(240, 152, 80);
+            background-color: rgb(214, 202, 202);
+            border-color: rgb(255, 136, 0);
+        }
+
+        #lienhe{
+            width: 85%;
+            padding-top: 100px;
+        }
+
+        #lienhe p{
+            font-size: 15px;
+        }
+
+        #lienhe #thongTinLienHe{
+            margin: auto;
+            border-bottom: 3px inset orange;
+            border-radius: 5%;
+            background-color:transparent;
+
+            border-left: 3px inset orange;
+        }
+
+        #lienhe #thongTinLienHe h2{
+            border-bottom: 3px outset black;
+            border-radius: 10%;
+            color: rgb(158, 103, 0);
+        }
+
+        #lienhe #thongTinLienHe h5{
+            color: rgb(180, 118, 1);
+        }
+
+        #lienhe #thongTinLienHe em{
+            color: rgb(0, 145, 36);
+            font-weight: bold;
+        }
+
