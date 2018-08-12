@@ -1,0 +1,323 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    
+    <script src="js/vendor/foundation.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <style >
+        .sale{
+            
+          
+        }
+        .sale .itemWrapper{
+            padding:15px;
+        }
+        .sale .item{
+            
+        }
+        .sale .item .image{
+            height:300px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .sale .item .name{
+            font-size:18px;
+            padding:5px;
+        }
+        .sale .item .price{
+            color:red;
+            font-size:18px;
+            padding:5px;
+        }
+         .cart{
+            color:white;
+            padding:6px;
+            text-align: center;
+            font-size:17px;
+            background-color:orangered;
+            opacity:0;
+        }
+        .sale .componentFilt{
+            
+            padding:10px;
+            border-top:1px solid;
+            
+        }
+        .itemWrapper:hover{
+            box-shadow: 0px 0px 10px 2px gray;
+        }
+        .itemWrapper:hover .cart{
+            opacity:1;
+        }
+        .sale .sortBy{
+            float:right;
+            margin-right:5%;
+        }
+        .sale .sortBy .sortByOption{
+            width:150px;
+        }
+        
+        .sale .sortBy .labelSort{
+            font-size:20px;
+            padding:5px;
+        }
+        .pagination{
+            display:block;
+            margin:auto; 
+            text-align: center;
+            margin:30px 0px;
+        }
+        
+        .pagination .pageNode{
+            display:inline-block;
+            text-decoration: none;
+            padding:10px;
+            border-radius:5px;
+          
+            border:1px solid #007bff;
+            color:#007bff;
+        }
+        .active{
+            background-color:#007bff;
+            color:white!important;
+        }
+        .pagination .arr{
+            background-color:black;
+            color:white;
+            border-radius: 0px;
+            border:1px solid black;
+        }
+        
+        .pagination .arr:hover{
+            background-color:white!important;
+            color:black;
+            border:1px solid black;
+        }
+        .filtBtn{
+            border: 1px solid gray;
+            display: block;
+            width:fit-content;
+            padding:8px;
+            text-align:center;
+            font-size:20px;
+            display:none;
+        }
+        @media screen and (max-width:992px){
+            .filtBtn{
+                display:block;
+              
+            }
+            .filtContent h4{
+                display:none;
+            }
+            .filtContent{
+                display:none;
+                border-bottom:1px solid;
+                margin-bottom:10px;
+            }
+            .filtBtn:hover{
+                cursor: pointer;
+                box-shadow: 0px 0px 2px 1px gray;
+            }
+            .productList{
+                margin-top:5px;
+            }
+        }
+    </style>
+</head>
+    
+<body >
+    <div class="myMenu">
+            <div class="logo"></div>
+            <i class="fa fa-reorder iconMenu" onclick="showMenu()"></i>>
+            <ul>
+                <li><a href="#"><img src="image/gioithieu.png" style="margin-top: -4px;
+    margin-right: 4px;"><span class="titleMenu">Giới thiệu</span></a></li>
+                <li><a href="#"><img src="image/dichvu.png" style="margin-top:-1px"><span class="titleMenu">Dịch vụ</span></a></li>
+                <li><a href="#"><img src="image/tuyendung.png" style="height: 28px;margin-right: 4px;margin-top: -6px;"><span class="titleMenu">Tuyển dụng</span></a></li>
+                <li><a href="#"><img src="image/tintuc.png" style="margin-top:-1px"><span class="titleMenu">Tin Tức</span></a></li>
+                <li><a href="#"><img src="image/lienhe.png" style="margin-right: 6px;margin-top: -4px;"><span class="titleMenu">Liên hệ</span></a></li>
+            </ul> 
+    </div>
+    <div style="height:90px"></div>
+    <div class="container sale">
+        <div class="row">
+            <div class="col-lg-3 filt" >
+                <div class="filtBtn" onclick="showFilt()"><i class="fa fa-filter" style="color:cadetblue"></i></div>
+                <div class="filtContent">
+                    <h4>Bộ lọc</h4>
+                    <div class="row" style="margin:0">
+                        <div class="componentFilt col-lg-12 col-6 ">
+                        <h5>Giá</h5>
+                        <form>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" checked>All</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Dưới 1 triệu</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Trên 1 triệu</label>
+                            </div>
+                        </form>
+                    </div>
+                        <div class="componentFilt col-lg-12 col-6">
+                    <h5>Kích thước</h5>
+                    <form>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">32</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">33</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">34</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">35</label>
+                        </div>
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">36</label>
+                        </div>
+                      </form>
+                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 productList" >
+                <div class="row sortBy">
+                    <div class="labelSort">Sắp xếp</div>
+                    <select class="sortByOption">
+                        <option>Bán chạy nhất</option>
+                        <option>Giá tăng dần</option>
+                        <option>Giá giảm dần</option>
+                    </select>
+                </div>
+                <div class="row" style="clear:both">
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                             <div class="image"><img src="image/4.jpg"></div>
+                             <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                             <div class="price">120.000 đ</div>
+                             <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>
+                        </a>
+                    </div>
+           
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                            <div class="image"><img src="image/2.jpg"></div>
+                            <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                             <div class="price">120.000 đ</div>
+                             <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>  
+                        </a>
+                    </div>
+
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                             <div class="image"><img src="image/3.jpg"></div>
+                             <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                             <div class="price">120.000 đ</div>
+                            <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>
+                        </a>
+                    </div>
+               
+                       <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                             <div class="image"><img src="image/4.jpg"></div>
+                             <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                             <div class="price">120.000 đ</div>
+                            <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>
+                        </a>
+                    </div>
+           
+                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                            <div class="image"><img src="image/2.jpg"></div>
+                            <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                            <div class="price">120.000 đ</div>
+                            <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>
+                        </a>
+                    </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-6 col-12 itemWrapper">
+                        <a class="item">
+                             <div class="image"><img src="image/3.jpg"></div>
+                             <div class="name">Giày Thể Thao Nam Biti's Hunter X DSM069033KEM (Kem)</div>
+                             <div class="price">120.000 đ</div>
+                            <div class="cart">Thêm vào giỏ hàng<i class="fa fa-shopping-cart" style="font-size:20px;margin-left:10px;"></i> </div>
+                        </a>
+                    </div>
+               
+               
+                
+            </div>
+                <div class="row pagination">
+                     <a href="#" class="arr prev pageNode"><i class="fa fa-chevron-left"></i></a>
+                    <a href="#" class="active pageNode">1</a>
+                     <a href="#" class="pageNode">2</a>
+                     <a href="#" class="pageNode">3</a>
+                     <a href="#" class="pageNode">4</a>
+                     <a href="#" class="pageNode">5</a>
+                     <a href="#" class="arr next pageNode"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            
+        </div>
+    </div>
+    </div>
+    <div class="footer grid-x">  
+        <div class="cell medium-2 large-2">
+            <img src="image/logo1.png" class="logo">
+        </div>
+        <div class="cell medium-5 large-5" style="text-align: center;">
+            <div class="title">Dịch Vụ</div>
+            <div class="content1">Rửa xe</div>
+             <div class="content1">Thay nhớt</div>
+             <div class="content1">Chăm sóc bảo dưỡng xe</div>
+        </div>
+       
+        <div class="cell medium-5 large-5">
+            <div class="title">Liên hệ</div>
+            <div class="info">
+               <span class="name">Địa chỉ:</span>
+                <span class="content2">172 Đường Hoa Lan, Phường 2, Quận Phú Nhuận, TP. Hồ Chí Minh</span>
+            </div>
+            <div class="info">
+               <span class="name">Email:</span>
+                <span class="content2">cskh@vietwash.vn</span>
+            </div>
+            <div class="info">
+               <span class="name">Facebook:</span>
+                <span class="content2"><a href="https://facebook.com/ruaxevietwash">https://facebook.com/ruaxevietwash</a></span>
+            </div>
+            <div class="info">
+               <span class="name">Hotline:</span>
+                <span class="content2">01689814400</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showMenu(){
+            $(".myMenu ul").slideToggle();    
+    
+        }
+        function showFilt(){
+            $(".filtContent").slideToggle();
+        }
+        
+            
+            
+        
+        
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+   <!-- //<script src="js/vendor/foundation.js"></script>-->
+   
+    
+    <style >
+      
+        .animation2{
+            width:100%;
+            height:100%;
+            background-color:whitesmoke;
+           
+        }
+       
+        .animation2 .content{
+            height:30%;
+           text-align: center;
+            margin:0px;
+            background-color:rgb(27,29,31);
+        }
+        .animation2 .tit1{
+            margin:auto;
+            width:100%;
+            text-align: center;
+            font-size:28px;
+            color:#bcd02f;
+            font-weight:600;
+        }
+        .animation2 .tit1:after{
+            content:"";
+            border:1px solid;
+            display:block;
+            width:200px;
+            margin: auto;
+           color:olivedrab;
+            
+           
+        }
+        .animation2 .tit2{
+            margin:auto;
+            text-align: center;
+            font-size:24px;
+            width:100%;
+            color:white;
+            padding:20px;
+        }
+        .animation2 .slideSlick{
+            margin:0;
+            height:70%;
+            padding-top:4%;
+            text-align: center;
+            background-color:rgb(27,29,31);
+        }
+        .animation2 .item{
+            width:80%!important;
+           
+        }
+        .animation2 .item .image{
+            height:70%;
+            overflow: hidden;
+        }
+        .animation2 .item .name{
+            padding:4%;
+            margin-top:30px;
+            font-size:22px;
+            color:white;
+        }
+        .animation2 .item:hover{
+            text-decoration: none;
+        }
+        .animation2 .item:hover .image img{
+            transform:scale(1.3,1.3);
+            transition:0.4s ease;
+        }
+        .animation2 .item:hover .name{
+           transition:0.4s ease;
+            color:orangered;
+            
+        }
+       
+        .animation2 .arrow{
+            font-size:60px;
+            margin-top:50%;
+            color:white;
+            display:block;
+        }
+        .animation2 .arrow:hover{
+          color:orangered;
+        }
+    </style>
+</head>
+    
+<body >
+    <div class="animation2">
+     
+        <div class="content row">
+            <div class="tit1">Clean & Care</div>
+            <div class="tit2"><span style="color:darkorange">Clean & Care</span> hân hạnh được đồng hành cùng với tất cả các bạn thông qua các dịch vụ dưới đây</div>
+        </div>
+        
+        <div class="slideSlick row">
+            <div class="col-sx-0 col-sm-2 left">
+                <i class="fa fa-angle-left arrow btnPrev"></i>
+            </div>
+            <div class="col-xs-12 col-sm-8 center">
+                <a href="#" class="item">
+                    <div class="image"><img src="image/girl1.jpg" ></div>
+                    <div class="name">Rửa sên xe</div>
+                </a>
+                
+                 <a href="#" class="item">
+                    <div class="image"><img src="image/girl2.jpg" ></div>
+                    <div class="name">Rửa sên xe</div>
+                </a>
+                
+                <a href="#" class="item">
+                    <div class="image"><img src="image/girl3.jpg" ></div>
+                    <div class="name">Rửa sên xe</div>
+                </a>
+                
+                <a href="#" class="item">
+                    <div class="image"><img src="image/girl3.jpg" ></div>
+                    <div class="name">Rửa sên xe</div>
+                </a>
+
+               
+            </div>
+
+            <div class="col-sx-0 col-sm-2 right">
+                 <i class="	fa fa-angle-right arrow btnNext"></i>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".center").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay:false,
+                infinite:true,
+                autoplaySpeed: 1200,
+                prevArrow:$('.btnNext'),
+                nextArrow:$('.btnPrev'),
+                 responsive: [
+                      {
+                  breakpoint: 0,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              
+              ]
+            });
+        })
+        
+    </script>
+  
+   
+</body>
+</html>
