@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rửa xe XYZ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/index.css'>
+
+</head>
+
+<body>
+
+    <!-- Start Menu -->
+    <div id='menu'>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid" style="background-color: black !important;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html" title="Rửa xe chuyên nghiệp XYZ">
+                        <img class='iconLogo' src='image/imagemenu/logo.png'>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="menuElement">
+                            <a href='gioithieu.html'>
+                                <img class='iconMenu' src='image/imagemenu/gioithieu.png'> Giới thiệu</a>
+                        </li>
+                        <li class="menuElement">
+                            <a href='dichvu.html'>
+                                <img class='iconMenu' src='image/imagemenu/dichvu.png'> Dịch vụ</a>
+                        </li>
+                        <li class="menuElement">
+                            <a href='tuyendung.html'>
+                                <img class='iconMenu' src='image/imagemenu/tuyendung.png'> Tuyển dụng</a>
+                        </li>
+                        <li class="menuElement">
+                            <a href='tintuc.html'>
+                                <img class='iconMenu' src='image/imagemenu/tintuc.png'> Tin tức</a>
+                        </li>
+                        <li class="menuElement">
+                            <a href='lienhe.html'>
+                                <img class='iconMenu' src='image/imagemenu/lienhe.png'> Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End Menu -->
+
+    <!--Start  Nhap Thong Tin Khach Hang-->
+    <div class='container-fluid' id='nhapThongTin'>
+        <div class='col-md-5 formNhapThongTin'>
+            <h2>Nhập thông tin của bạn </h2>
+            <form class="form-horizontal " action="/action_page.php">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="name">Tên người nhận:</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="name" placeholder="VD: Nguyễn Văn A" name="name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="sdt">Số điện thoại:</label>
+                    <div class="col-sm-7">
+                        <input type="number" class="form-control" id="sdt" placeholder="VD: 0123456789" name="sdt">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="address">Địa chỉ nhận hàng:</label>
+                    <div class="col-sm-7">
+                        <textarea class="form-control" rows="3" id="address" placeholder="VD: Số 1 - Võ Văn Ngân - Bình Thọ - Thủ Đức - Tp.HCM"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="note">Ghi chú: </label>
+                    <div class="col-sm-7">
+                        <textarea class="form-control" rows="3" id="note" placeholder="VD: Tôi chỉ có thể nhận hàng vào buổi chiều từ 15h - 17h"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Xác nhận</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class='col-md-7 chiTietSanPham'>
+            <h2>Chi tiết sản phẩm trong giỏ hàng</h2>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <!--End Nhap Thong Tin Khach Hang-->
+
+</body>
+
+</html>

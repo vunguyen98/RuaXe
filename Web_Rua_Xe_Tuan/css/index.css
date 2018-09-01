@@ -1,3 +1,9 @@
+        /* Class test */
+        .myTest{
+            background-color: green;
+        }
+        /* End class test */
+
         #menu {
             width: 100%;
             text-align: center;
@@ -63,12 +69,11 @@
         #slideshow {
             width: 100%;
             height: -webkit-fill-available;
-            position: absolute;
+            position: relative;
             top: 52px;
             display:inline-block;
             background-color: rgba(57, 156, 180, 0.438);
             overflow: hidden;
-            z-index: -1;
             max-height: 1010px;
         }
 
@@ -177,3 +182,42 @@
             font-weight: bold;
         }
 
+
+        #nhapThongTin{
+            width: 85%;
+            padding-top: 100px;
+            text-align: left;
+        }
+
+        #nhapThongTin p{
+            font-size: 15px;
+        }
+
+        #nhapThongTin .formNhapThongTin{
+            background-color: rgba(209, 193, 193, 0.158);
+            border-radius: 5%;
+        }
+
+        #nhapThongTin .chiTietSanPham{
+            background-color: rgba(209, 193, 193, 0.158);
+            border-radius: 5%;
+        }
+
+
+         #slideNews{
+             width: 100%;
+             margin-top: 45px;
+             position: relative;
+         }
+
+         #slideNews .mySlideNews {
+            position: absolute;
+            display: inline-block !important;
+        }
+
+         #slideNews .imgNews{
+             width: 100%;
+             border: 1px solid black;
+         }
+
+         
